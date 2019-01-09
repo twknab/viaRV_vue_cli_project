@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Tim",
+      "lastName": "Knab",
+      "email": "tim@sasquat.ch",
+      "password": "qwerty1234!",
+      "phoneNumber": "2062711443",
+      "avatarImgUrl": "https://via.placeholder.com/150/000000/FFFFFF/?text=UserAvatar"
+    },
+    {
+      "firstName": "Timothy",
+      "lastName": "Knab",
+      "email": "tim@test.com",
+      "password": "123123123",
+      "phoneNumber": "12312312312312",
+      "id": 2
+    },
+    {
+      "firstName": "Julianna",
+      "lastName": "Giles",
+      "email": "jgiles@bastyr.edu",
+      "password": "hellothere",
+      "phoneNumber": "123123123123",
+      "id": 3
+    },
+    {
+      "firstName": "Timothee",
+      "lastName": "Knabber",
+      "email": "tim@knabber.com",
+      "password": "123123123123",
+      "phoneNumber": "123123123123123",
+      "id": 4
+    }
+  ]
+}
