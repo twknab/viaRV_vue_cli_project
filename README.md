@@ -12,12 +12,12 @@ You can run the project locally by cloning this repository, and running the comm
 npm install
 ```
 
-### Run JSON server
+### Run JSON server with routing and watching enabled:
 
 (This will give us a mock API we can store and retrieve data from)
 
 ```javascript
-json-server --watch db.json
+json-server --watch db.json --routes routes.json
 ```
 
 ### Compiles and hot-reloads for development
