@@ -11,15 +11,12 @@ const apiClient = axios.create({
 
 export default {
   postUser(user) {
-    return apiClient.post("/users", user);
+    return apiClient.post("/account/register", user);
   },
   putUser(id, user) {
-    return apiClient.put(`/users/${id}`, user);
-  },
-  getUsers() {
-    return apiClient.get("/users");
+    return apiClient.put(`/profile/${id}`, user);
   },
   getUserByEmail(email) {
-    return apiClient.get(`/users?email=${email}`);
+    return apiClient.get(`/login/${email}`);
   }
 };

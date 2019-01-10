@@ -60,7 +60,8 @@ export default {
           password: this.password,
           phoneNumber: this.phoneNumber,
           // lets set a default avatar image for our user:
-          avatarImgUrl: "http://lorempixel.com/300/300/nature"
+          avatarImgUrl: "http://lorempixel.com/300/300/nature",
+          token: "someTokenDataGoesHere"
         };
 
         // reset values to null after form submission:

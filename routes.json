@@ -1,0 +1,5 @@
+{
+  "/account/register": "/users",
+  "/login/:email": "/users?email=:email",
+  "/profile/:id": "/users/:id"
+}

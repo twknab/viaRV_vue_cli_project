@@ -8,6 +8,15 @@
       "avatarImgUrl": "http://lorempixel.com/300/300/nature",
       "password": "qwerty",
       "id": 1
+    },
+    {
+      "firstName": "Timothee",
+      "lastName": "Knabber",
+      "email": "TimothyKnab@knab.com",
+      "phoneNumber": "123123123123123",
+      "avatarImgUrl": "http://lorempixel.com/300/500/nature",
+      "password": "123123123123",
+      "id": 2
     }
   ]
 }
