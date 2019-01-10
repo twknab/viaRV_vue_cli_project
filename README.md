@@ -1,8 +1,8 @@
-# ViaRV Vue + Webpack Project:
+# ViaRV Vue + Webpack Project
 
 This project is a client-side only demo of a Vue.js project using Webpack to bundle assets. Element UI is used as a css framework on pages, and Vue CLI was used to build this project and create its folder heirarchy.
 
-## Important Note:
+## Important Note
 
 This project uses `json-server` to serve data from `db.json`. JSON Server **must be running in order to store registered users or retrieve existing users**. This can be done by running:
 
@@ -22,7 +22,7 @@ You can run the project locally by cloning this repository, and running the comm
 npm install
 ```
 
-### Run JSON server with routing and watching enabled:
+### Run JSON server with routing and watching enabled
 
 (This will give us a mock API we can store and retrieve data from)
 

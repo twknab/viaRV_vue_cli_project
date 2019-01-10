@@ -46,9 +46,7 @@ export default {
   },
   methods: {
     updateGlobalUser(user) {
-      console.log(
-        "Home component here..sure I can update global user..will do that now..."
-      );
+      // emit to app component to update user and pass along user:
       this.$emit("updateGlobalUser", user);
     }
   }

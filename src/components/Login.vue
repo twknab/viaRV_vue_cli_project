@@ -54,6 +54,34 @@ export default {
         // reset values to null after form submission:
         this.email = null;
         this.password = null;
+
+        // find user by email and validate password:
+        UserService.getUserByEmail(findUser.email)
+          .then(response => {
+            if (response.data.length > 0) {
+              console.log("User found, validating login...");
+              // validate password;
+              if (
+                this.validatePassword(
+                  findUser.password,
+                  response.data[0].password
+                )
+              ) {
+                // password is correct, update global user:
+                this.$emit("updateGlobalUser", response.data[0]);
+
+                // redirect to user profile:
+                this.$router.push({ name: "userProfile" });
+              } else {
+                this.errors.push("Username or password is incorrect.");
+              }
+            } else {
+              this.errors.push("Username or password is incorrect.");
+            }
+          })
+          .catch(error => {
+            console.log("Error logging in: " + error.response);
+          });
       }
     },
     validateLogin(user) {
@@ -66,36 +94,6 @@ export default {
       } else if (user.password.length < 6) {
         errors.push("Password must be at least 6 characters.");
       }
-      // store our user supplied password because `user.password` does not seem to be accessible within our promises below.
-      let suppliedPassword = user.password;
-      UserService.getUserByEmail(user.email)
-        .then(response => {
-          console.log(response.data);
-          if (response.data.length > 0) {
-            console.log("User found, validating login...");
-            // validate password;
-            if (
-              this.validatePassword(suppliedPassword, response.data[0].password)
-            ) {
-              // Password correct load profile:
-              // update global user:
-              console.log(
-                "Login component here..gunna update global user and send it up to Home..."
-              );
-              this.$emit("updateGlobalUser", response.data[0]);
-
-              // redirect to user profile:
-              this.$router.push({ name: "userProfile" });
-            } else {
-              errors.push("Username or password is incorrect.");
-            }
-          } else {
-            errors.push("Username or password is incorrect.");
-          }
-        })
-        .catch(error => {
-          console.log("Error logging in: " + error.response);
-        });
       return errors;
     },
     validatePassword(submittedPassword, foundPassword) {

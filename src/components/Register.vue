@@ -74,7 +74,6 @@ export default {
         // emit to global function and send new User to update global scope:
         UserService.postUser(newUser)
           .then(response => {
-            console.log(response.data);
             // update logged in user:
             this.$emit("updateGlobalUser", response.data);
             // load profile:
