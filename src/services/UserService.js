@@ -16,8 +16,8 @@ export default {
   getUsers() {
     return apiClient.get("/users");
   },
-  getUser(id) {
-    return apiClient.get("/users", id);
+  getUser(email) {
+    return apiClient.get(`/users?email=${email}`);
   },
   updateUser(user) {
     return apiClient.put("/users", user);

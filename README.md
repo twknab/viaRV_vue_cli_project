@@ -46,3 +46,21 @@ This project uses the following technologies:
 - Axios to perform our AJAX requests, maintaining our SPA's (Single Page Application's) client-side rendering only.
 - Vue Router is used to handle client-side rendering.
 - Vue CLI was used to build project base and folder structure.
+
+### Registration & Login Validations
+
+There are some validations in place for registration and login (front-end only):
+
+- All fields are required.
+- Email must be at least 5 characters.
+- First and last name must be at least 2 characters.
+- Password must be at least 6 characters.
+- Phone number must be ast least 10 characters.
+
+Notes about this front-end validation:
+
+- I just quickly implemented a solution, I understand that this code could be modularized and cleaned up. I also understand there are more native ways of doing front-end validation, for example Element UI has a way which provides field-specific error messages. This would probably be a better implementation.
+
+### A Note About Users and Passwords
+
+Because this project does not have a backend, I did not do any encryption and concatenate salts to any user passwords. Passwords are stored in `db.json` as-is. I understand this is extremley insecure and was just done for simplicity's sake for this demo. In a real world scenario, these passwords would be encrypted when stored in the DB, and compared with the user supplied password upon logging in.

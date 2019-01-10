@@ -8,7 +8,7 @@
           <el-col :xs="1" :sm="6" :md="8" :lg="7" :xl="8"></el-col>
           <el-col :xs="22" :sm="12" :md="8" :lg="10" :xl="8">
             <div>
-            <Login msg="If you're an existing user, login below:" :login-user="loginNewUser"/>
+            <Login msg="If you're an existing user, login below:" @login-user="loginNewUser"/>
             </div>
           </el-col>
           <el-col :xs="1" :sm="6" :md="8" :lg="7" :xl="8"></el-col>
@@ -18,7 +18,7 @@
           <el-col :xs="1" :sm="6" :md="8" :lg="7" :xl="8"></el-col>
           <el-col :xs="22" :sm="12" :md="8" :lg="10" :xl="8">
             <div>
-            <Register msg="Otherwise, go ahead and register here:" :login-user="loginNewUser"/>
+            <Register msg="Otherwise, go ahead and register here:" @login-user="loginNewUser"/>
             </div>
           </el-col>
           <el-col :xs="1" :sm="6" :md="8" :lg="7" :xl="8"></el-col>
@@ -38,6 +38,14 @@ export default {
   components: {
     Login,
     Register
+  },
+  methods: {
+    loginNewUser(user) {
+      console.log("$$$$$$$");
+      console.log("LOGIN NEW USER IS RUNNING");
+      console.log(user);
+      console.log("$$$$$$$");
+    }
   }
 };
 </script>

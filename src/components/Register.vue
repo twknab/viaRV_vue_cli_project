@@ -78,7 +78,7 @@ export default {
             this.$router.push({ name: "userProfile" });
           })
           .catch(error => {
-            console.log("there was an error" + error.response);
+            console.log("Error registering user: " + error.response);
           });
       }
     },
