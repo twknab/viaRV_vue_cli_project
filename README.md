@@ -80,3 +80,7 @@ Because this project does not have a backend, I did not do any encryption and co
 ### Notes about Routing
 
 Routing is being handled client-side by Vue Router. The API requests are being mocked using `json-server`, and using `routes.json`, I've setup routes to reflect the project requirements. Data is stored to `db.json` after users are created. This is also where data is being read from. Refreshing the page however, will destroy any "session" (I'm just holding the user in an app global data object), and one will have to login again. Trying to access the profile page without a valid "session" will redirect you home.
+
+#### Important Note about Login Routing
+
+I was having a little trouble figuring out the right way to implement a POST request to the `json-server` via axios, to retrieve a record to validate a password against. I understand that in a production app, I would **never** use anything but a PUT method to send password data. Please kindly understand that because I can't do any server-side logic (e.g, password validation on the server, choosing to **not save the data** and sending back  errors), I chose to implement a solution where I use a GET method to only send email, to retrieve a record and do the comparison that way. Typically, the server would validate the user and establish a session, and in our scenario, also send back the valid user data. Because I can't intercept the storage of the data I send in my POST method within  Axios and `json-server`, I'm using a GET method to mimic the sort of DB query I'd do server-side.

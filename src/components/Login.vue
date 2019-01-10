@@ -58,6 +58,8 @@ export default {
         // find user by email and validate password:
         UserService.getUserByEmail(findUser.email)
           .then(response => {
+            console.log("$$$$");
+            console.log(response.data);
             if (response.data.length > 0) {
               console.log("User found, validating login...");
               // validate password;
@@ -80,7 +82,8 @@ export default {
             }
           })
           .catch(error => {
-            console.log("Error logging in: " + error.response);
+            console.log("Error logging in:");
+            console.log(error.response);
           });
       }
     },
