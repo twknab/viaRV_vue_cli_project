@@ -10,7 +10,7 @@
         </el-alert>
       </div>
       <el-input placeholder="Email" v-model="email"> </el-input>
-      <el-input placeholder="Password" v-model="password"> </el-input>
+      <el-input placeholder="Password" type="password" v-model="password"> </el-input>
       <el-row id="submit-button">
         <el-button type="primary" icon="el-icon-d-arrow-right" @click="loginUser">Login</el-button>
       </el-row>
@@ -37,7 +37,6 @@ export default {
   methods: {
     loginUser() {
       // begin validation:
-
       // empty errors array if any existing errors:
       this.errors = [];
 
@@ -69,7 +68,7 @@ export default {
       }
       // store our user supplied password because `user.password` does not seem to be accessible within our promises below.
       let suppliedPassword = user.password;
-      UserService.getUser(user.email)
+      UserService.getUserByEmail(user.email)
         .then(response => {
           console.log(response.data);
           if (response.data.length > 0) {
@@ -80,7 +79,10 @@ export default {
             ) {
               // Password correct load profile:
               // update global user:
-              this.$emit("login-user", response.data[0]);
+              console.log(
+                "Login component here..gunna update global user and send it up to Home..."
+              );
+              this.$emit("updateGlobalUser", response.data[0]);
 
               // redirect to user profile:
               this.$router.push({ name: "userProfile" });

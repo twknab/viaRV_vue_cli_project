@@ -1,13 +1,13 @@
 {
   "users": [
     {
-      "id": 1,
       "firstName": "Tim",
       "lastName": "Knab",
-      "email": "tim@sasquat.ch",
-      "password": "qwerty1234!",
+      "email": "tim@tim.com",
       "phoneNumber": "2062711443",
-      "avatarImgUrl": "https://via.placeholder.com/150/000000/FFFFFF/?text=UserAvatar"
+      "avatarImgUrl": "https://via.placeholder.com/200/000000/EEEEEE/?text=UserAvatar",
+      "password": "qwerty",
+      "id": 1
     },
     {
       "firstName": "Timothy",
@@ -32,6 +32,87 @@
       "password": "123123123123",
       "phoneNumber": "123123123123123",
       "id": 4
+    },
+    {
+      "firstName": "Bill",
+      "lastName": "Banks",
+      "email": "bill@banks.com",
+      "password": "billy12345",
+      "phoneNumber": "2062711443",
+      "id": 5
+    },
+    {
+      "firstName": "Mike",
+      "lastName": "Jones",
+      "email": "mj@jones.com",
+      "password": "makemoneyallday",
+      "phoneNumber": "1231231234",
+      "avatarImgUrl": "https://via.placeholder.com/200/000000/FFFFFF/?text=UserAvatar",
+      "id": 6
+    },
+    {
+      "firstName": "Tim",
+      "lastName": "Knab",
+      "email": "tim@sasquat.ch",
+      "phoneNumber": "2062711443",
+      "avatarImgUrl": "https://via.placeholder.com/150/000000/FFFFFF/?text=UserAvatar",
+      "id": 7
+    },
+    {
+      "firstName": "Tim",
+      "lastName": "Knab",
+      "email": "tim@sasquat.c",
+      "phoneNumber": "2062711443",
+      "avatarImgUrl": "https://via.placeholder.com/150/000000/FFFFFF/?text=UserAvatar",
+      "id": 8
+    },
+    {
+      "firstName": "Tim",
+      "lastName": "Kna",
+      "email": "tim@sasquat.c",
+      "phoneNumber": "2062711443",
+      "avatarImgUrl": "https://via.placeholder.com/150/000000/FFFFFF/?text=UserAvatar",
+      "id": 9
+    },
+    {
+      "firstName": "Tim",
+      "lastName": "Knab",
+      "email": "tim@sasquat.ch",
+      "phoneNumber": "2062711443",
+      "avatarImgUrl": "https://via.placeholder.com/150/000000/FFFFFF/?text=UserAvatar",
+      "id": 10
+    },
+    {
+      "firstName": "Tim",
+      "lastName": "Knab",
+      "email": "tim@sasquat.ch",
+      "phoneNumber": "2062711443",
+      "avatarImgUrl": "https://via.placeholder.com/150/000000/FFFFFF/?text=UserAvatar",
+      "id": 11
+    },
+    {
+      "firstName": "Tim",
+      "lastName": "Knab",
+      "email": "tim@sasquat.ch",
+      "phoneNumber": "2062711443",
+      "avatarImgUrl": "https://via.placeholder.com/150/000000/FFFFFF/?text=UserAvatar",
+      "id": 12
+    },
+    {
+      "firstName": "Tim",
+      "lastName": "Knab",
+      "email": "tim@sasquat.ch",
+      "phoneNumber": "2062711443",
+      "avatarImgUrl": "https://via.placeholder.com/150/000000/FFFFFF/?text=UserAvatar",
+      "id": 13
+    },
+    {
+      "firstName": "Tim",
+      "lastName": "Knab",
+      "email": "tim@sasquat.c",
+      "phoneNumber": "2062711443",
+      "avatarImgUrl": "https://via.placeholder.com/150/000000/FFFFFF/?text=UserAvatar",
+      "id": 14
     }
   ]
 }

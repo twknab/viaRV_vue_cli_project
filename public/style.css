@@ -34,11 +34,14 @@ form.el-form {
 }
 .el-button--primary {
   color: #fff;
-  font-size: 16px !important;
-  font-weight: bolder !important;
   background-color: #38B682 !important;
   border-color: #38B682 !important;
+}
+.el-button {
+  font-size: 16px !important;
+  font-weight: bolder !important;
   width: 125px;
+  margin: 10px;
 }
 #submit-button {
   margin-top: 10px;

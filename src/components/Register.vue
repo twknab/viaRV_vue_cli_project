@@ -58,7 +58,10 @@ export default {
           lastName: this.lastName,
           email: this.email,
           password: this.password,
-          phoneNumber: this.phoneNumber
+          phoneNumber: this.phoneNumber,
+          // lets set a default avatar image for our user:
+          avatarImgUrl:
+            "https://via.placeholder.com/200/000000/FFFFFF/?text=UserAvatar"
         };
 
         // reset values to null after form submission:
@@ -73,7 +76,7 @@ export default {
           .then(response => {
             console.log(response.data);
             // update logged in user:
-            this.$emit("login-user", newUser);
+            this.$emit("updateGlobalUser", response.data);
             // load profile:
             this.$router.push({ name: "userProfile" });
           })
