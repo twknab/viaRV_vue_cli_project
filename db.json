@@ -4,19 +4,11 @@
       "firstName": "Tim",
       "lastName": "Knab",
       "email": "tim@tim.com",
+      "password": "qwerty",
       "phoneNumber": "1234567890",
       "avatarImgUrl": "http://lorempixel.com/300/300/nature",
-      "password": "qwerty",
+      "token": "someTokenDataGoesHere",
       "id": 1
-    },
-    {
-      "firstName": "Timothee",
-      "lastName": "Knabber",
-      "email": "TimothyKnab@knab.com",
-      "phoneNumber": "123123123123123",
-      "avatarImgUrl": "http://lorempixel.com/300/500/nature",
-      "password": "123123123123",
-      "id": 2
     }
   ]
 }

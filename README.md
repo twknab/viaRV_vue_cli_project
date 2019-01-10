@@ -2,13 +2,23 @@
 
 This project is a client-side only demo of a Vue.js project using Webpack to bundle assets. Element UI is used as a css framework on pages, and Vue CLI was used to build this project and create its folder heirarchy.
 
+## Important Note:
+
+This project uses `json-server` to serve data from `db.json`. JSON Server **must be running in order to store registered users or retrieve existing users**. This can be done by running:
+
+```bash
+json-server --watch db.json --routes routes.json
+```
+
+JSON Server should install when running `npm install`, but please confirm this else the project won't work as expected.
+
 You can run the project locally by cloning this repository, and running the commands below:
 
 ## Installation
 
 ### Project setup
 
-```javascript
+```bash
 npm install
 ```
 
@@ -16,19 +26,19 @@ npm install
 
 (This will give us a mock API we can store and retrieve data from)
 
-```javascript
+```bash
 json-server --watch db.json --routes routes.json
 ```
 
 ### Compiles and hot-reloads for development
 
-```javascript
+```bash
 npm run serve
 ```
 
 ### Compiles and minifies for production
 
-```javascript
+```bash
 npm run build
 ```
 
@@ -64,3 +74,7 @@ Notes about this front-end validation:
 ### A Note About Users and Passwords
 
 Because this project does not have a backend, I did not do any encryption and concatenate salts to any user passwords. Passwords are stored in `db.json` as-is. I understand this is extremley insecure and was just done for simplicity's sake for this demo. In a real world scenario, these passwords would be encrypted when stored in the DB, and compared with the user supplied password upon logging in.
+
+### Notes about Routing
+
+Routing is being handled client-side by Vue Router. The API requests are being mocked using `json-server`, and using `routes.json`, I've setup routes to reflect the project requirements. Data is stored to `db.json` after users are created. This is also where data is being read from. Refreshing the page however, will destroy any "session" (I'm just holding the user in an app global data object), and one will have to login again. Trying to access the profile page without a valid "session" will redirect you home.
