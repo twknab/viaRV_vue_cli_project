@@ -1,5 +1,8 @@
 <template>
-  <h1>404 - This page doesn't exist.</h1>
+  <div>
+    <img alt="Vue logo" src="../assets/viarv-logo.png" class="logo">
+    <h1>404 - This page doesn't exist.</h1>
+  </div>
 </template>
 
 <script>

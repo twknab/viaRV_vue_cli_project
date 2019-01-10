@@ -62,9 +62,9 @@ export default {
     };
   },
   created() {
-    console.log(this.loggedInUser);
+    // If user profile builds and no logged in user email is detected re-route home (invalid session):
     if (!this.loggedInUser.email) {
-      console.log("NONE");
+      console.log("Invalid session");
       this.$router.push({ name: "home" });
     }
   },
@@ -84,12 +84,10 @@ export default {
           lastName: this.lastName,
           email: this.email,
           phoneNumber: this.phoneNumber,
-          avatarImgUrl: this.avatarImgUrl
+          avatarImgUrl: this.avatarImgUrl,
+          password: this.password
         };
 
-        if (this.password) {
-          userToUpdate.password = this.password;
-        }
         UserService.putUser(this.loggedInUser.id, userToUpdate)
           .then(response => {
             console.log(response.data);

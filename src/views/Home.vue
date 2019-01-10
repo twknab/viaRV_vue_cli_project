@@ -40,9 +40,7 @@ export default {
     Register
   },
   data() {
-    return {
-      // loggedInUser: loggedInUser;
-    };
+    return {};
   },
   methods: {
     updateGlobalUser(user) {

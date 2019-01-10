@@ -12,6 +12,8 @@ json-server --watch db.json --routes routes.json
 
 JSON Server should install when running `npm install`, but please confirm this else the project won't work as expected.
 
+Note: You should have 2 terminal windows running: the first (1) running the `json-server` and the second (2) running your vue development server.
+
 You can run the project locally by cloning this repository, and running the commands below:
 
 ## Installation

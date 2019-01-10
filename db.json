@@ -1,13 +1,12 @@
 {
   "users": [
     {
-      "firstName": "Tim",
+      "firstName": "Timothy",
       "lastName": "Knab",
       "email": "tim@tim.com",
-      "password": "qwerty",
       "phoneNumber": "1234567890",
-      "avatarImgUrl": "http://lorempixel.com/300/300/nature",
-      "token": "someTokenDataGoesHere",
+      "avatarImgUrl": "http://sasquatchcreative.com/wp-content/uploads/2017/10/bio-pic.png",
+      "password": "qwerty",
       "id": 1
     }
   ]
