@@ -60,8 +60,7 @@ export default {
           password: this.password,
           phoneNumber: this.phoneNumber,
           // lets set a default avatar image for our user:
-          avatarImgUrl:
-            "https://via.placeholder.com/200/000000/FFFFFF/?text=UserAvatar"
+          avatarImgUrl: "http://lorempixel.com/300/300/nature"
         };
 
         // reset values to null after form submission:

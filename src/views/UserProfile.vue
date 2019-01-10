@@ -1,27 +1,42 @@
 <template>
   <div>
-    <h1>User Profile</h1>
-    <img :src="loggedInUser.avatarImgUrl" alt="User Avatar">
-    <form>
-      <div v-if="errors.length" class="errors">
-        <el-alert v-for="error in errors" :key="errors.indexOf(error)"
-          :title="error"
-          type="error">
-        </el-alert>
-      </div>
-      <el-input placeholder="First Name" v-model="firstName"></el-input>
-      <el-input placeholder="Last Name" v-model="lastName"></el-input>
-      <el-input placeholder="Email" type="email" v-model="email"></el-input>
-      <el-input placeholder="Password" type="password" v-model="password" :value="password"></el-input>
-      <el-input placeholder="Phone Number" type="tel" v-model="phoneNumber"></el-input>
-      <el-input placeholder="Avatar URL" type="text" v-model="avatarImgUrl"></el-input>
-      <el-row id="submit-button">
-        <el-button type="primary" icon="el-icon-check" @click="updateUser">Update</el-button>
-      </el-row>
-    </form>
-    <el-row>
-      <el-button icon="el-icon-d-arrow-left" @click="logout">Logout</el-button>
-    </el-row>
+    <el-container>
+      <el-main>
+        <!-- User Profile -->
+        <el-row type="flex" justify="space-around" :gutter="10">
+          <el-col :xs="1" :sm="5" :md="6" :lg="7" :xl="8"></el-col>
+          <el-col :xs="22" :sm="14" :md="12" :lg="10" :xl="8">
+            <div>
+              <h1>User Profile</h1>
+              <!-- User Avatar -->
+              <img :src="loggedInUser.avatarImgUrl" alt="User Avatar" class="avatar-image">
+              <!-- User Update Form -->
+              <form>
+                <div v-if="errors.length" class="errors">
+                  <el-alert v-for="error in errors" :key="errors.indexOf(error)"
+                    :title="error"
+                    type="error">
+                  </el-alert>
+                </div>
+                <el-input placeholder="First Name" v-model="firstName"></el-input>
+                <el-input placeholder="Last Name" v-model="lastName"></el-input>
+                <el-input placeholder="Email" type="email" v-model="email"></el-input>
+                <el-input placeholder="Password" type="password" v-model="password" :value="password"></el-input>
+                <el-input placeholder="Phone Number" type="tel" v-model="phoneNumber"></el-input>
+                <el-input placeholder="Avatar URL" type="text" v-model="avatarImgUrl"></el-input>
+                <el-row id="submit-button">
+                  <el-button type="primary" icon="el-icon-check" @click="updateUser">Update</el-button>
+                </el-row>
+                <el-row>
+                  <el-button icon="el-icon-d-arrow-left" @click="logout" class="logout-button">Logout</el-button>
+                </el-row>
+              </form>
+            </div>
+          </el-col>
+          <el-col :xs="1" :sm="5" :md="6" :lg="7" :xl="8"></el-col>
+        </el-row>
+      </el-main>
+    </el-container>
   </div>
 </template>
 

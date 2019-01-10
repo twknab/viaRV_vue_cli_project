@@ -1,5 +1,7 @@
 h1 {
-  font-size: 32px;
+  font-size: 52px;
+  margin-bottom: 0px;
+  margin-top: 10px;
 }
 .logo {
   background: #38b682;
@@ -7,11 +9,19 @@ h1 {
   background: -webkit-linear-gradient(top, #38b682 0%, #5cb590 100%);
   background: linear-gradient(to bottom, #38b682 0%, #5cb590 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#38b682', endColorstr='#5cb590', GradientType=0);
-  border-radius: 15px;
-  border: 15px solid #1F7857;
+  border-radius: 10px;
+  /* border: 15px solid rgba(56, 182, 130, 1); */
+  border-bottom: 15px solid rgb(45, 151, 107);
+  width: 100%;
+  max-width: 445px;
+  height: auto;
+  padding: 10px;
 }
-.el-input {
+.el-input__inner {
   margin: 3px;
+  font-size: 22px !important;
+  height: 55px !important;
+  padding: 15px !important;
 }
 .el-form-item__label {
   font-weight: bolder;
@@ -32,16 +42,28 @@ form.el-form {
   padding-left: -20px;
   border-radius: 15px; 
 }
+.el-input__inner:focus {
+  border-color: #38B682 !important;
+  border-width: 3px;
+}
 .el-button--primary {
   color: #fff;
   background-color: #38B682 !important;
   border-color: #38B682 !important;
 }
 .el-button {
-  font-size: 16px !important;
+  font-size: 20px !important;
   font-weight: bolder !important;
-  width: 125px;
+  width: 100%;
   margin: 10px;
+  position: relative;
+  left: 3px;
+}
+.el-button:focus,
+.el-button:hover {
+  color: #38B682 !important;
+  border-color: #38B682 !important;
+  background-color: rgb(238, 255, 248) !important;
 }
 #submit-button {
   margin-top: 10px;
@@ -51,4 +73,31 @@ form.el-form {
 }
 .el-alert.el-alert--error {
   margin-bottom: 6px;
+}
+.el-alert__title {
+  font-size: 20px !important;
+}
+.el-alert.el-alert--error {
+  padding: 22px;
+}
+.el-alert__closebtn {
+  font-size: 20px !important;
+}
+.registration-component {
+  margin-top: 60px;
+}
+.avatar-image {
+  box-shadow: 0px 0px 20px -3px #000;
+  -webkit-box-shadow: 0px 0px 20px -3px #000;
+  -moz-box-shadow: 0px 0px 20px -3px #000;
+  margin-bottom: 15px;
+}
+.logout-button {
+  margin-top: 10px !important;
+}
+
+@media only screen and (max-width: 500px) {
+  .logo {
+    width: 85%;
+  }
 }

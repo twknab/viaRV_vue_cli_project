@@ -17,8 +17,8 @@
         <el-row type="flex" justify="space-around" :gutter="10">
           <el-col :xs="1" :sm="6" :md="8" :lg="7" :xl="8"></el-col>
           <el-col :xs="22" :sm="12" :md="8" :lg="10" :xl="8">
-            <div>
-            <Register msg="Otherwise, go ahead and register here:" @updateGlobalUser="updateGlobalUser"/>
+            <div class="registration-component">
+              <Register msg="Otherwise, go ahead and register here:" @updateGlobalUser="updateGlobalUser"/>
             </div>
           </el-col>
           <el-col :xs="1" :sm="6" :md="8" :lg="7" :xl="8"></el-col>
