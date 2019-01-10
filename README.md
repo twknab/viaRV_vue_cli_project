@@ -67,7 +67,7 @@ There are some validations in place for registration and login (front-end only):
 - Email must be at least 5 characters.
 - First and last name must be at least 2 characters.
 - Password must be at least 6 characters.
-- Phone number must be ast least 10 characters.
+- Phone number must be at least 10 characters.
 
 Notes about this front-end validation:
 
